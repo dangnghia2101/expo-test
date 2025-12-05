@@ -1,0 +1,5 @@
+export const QUERY_INTERVAL_DELAY = {
+  DISABLED: false,
+  UNREAD: 5000,
+  UNREAD_DEV: 50000
+};

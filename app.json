@@ -1,0 +1,104 @@
+{
+  "expo": {
+    "name": "Expo Test",
+    "slug": "expo-test",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "expo-test",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "ios": {
+      "appleTeamId": "6XEJ25LS8P",
+      "buildNumber": "25060201",
+      "bundleIdentifier": "vn.dev.expotest",
+      "supportsTablet": false,
+      "entitlements": {
+        "aps-environment": "development"
+      },
+      "infoPlist": {
+        "CFBundleDisplayName": "Expo Test",
+        "UIBackgroundModes": ["remote-notification"],
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleDevelopmentRegion": "en",
+        "CFBundleLocalizations": ["en"]
+      },
+      "googleServicesFile": "./firebase/GoogleService-Info.plist"
+    },
+    "android": {
+      "package": "vn.dev.expotest",
+      "versionCode": "25060201",
+      "backgroundColor": "#ffffff",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "monochromeImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "googleServicesFile": "./firebase/google-services.json"
+    },
+    "plugins": [
+      [
+        "react-native-iap",
+        {
+          "paymentProvider": "Play Store"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/NotoSans-Regular.ttf",
+            "./src/assets/fonts/NotoSans-Bold.ttf",
+            "./src/assets/fonts/NotoSans-SemiBold.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./src/assets/images/splash.png",
+          "resizeMode": "contain",
+          "ios": {
+            "imageWidth": 350
+          }
+        }
+      ],
+      [
+        "expo-dev-client",
+        {
+          "launchMode": "most-recent"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./src/assets/images/icon.png"
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "react-native-iap",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Expo Test needs access to your photo library to upload profile photos, create tweets, and send age verification photos",
+          "cameraPermission": "Expo Test needs access to your camera to upload profile photos, create tweets, and send age verification photos"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d2fced01-85ed-4182-b169-7641531bfa9b"
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+export interface UserProps {
+  id: number;
+  avatar: null;
+  username: null;
+  email: null;
+  fullName: string;
+  gender: string;
+  birthday: Date;
+  phone: string;
+  location: Location;
+  profile: null;
+  isAvailable: boolean;
+  status: string;
+  userType: string;
+  role: string;
+  introduction: null;
+  provider: null;
+  providerId: null;
+  roleId: null;
+  unread: number;
+  isPremium: boolean;
+  completeOnboarding: boolean;
+  point: number;
+  hometown: null;
+  todayWord: null;
+  height: null;
+  interest: null;
+  meetExpectation: null;
+  bodyType: null;
+  salary: null;
+  job: null;
+  education: null;
+  companyName: null;
+  marriageStatus: null;
+  tobacco: null;
+  sake: null;
+  familyStatus: null;
+  livingStatus: null;
+  remainFreeMsg: number;
+  newUser: boolean;
+  payLevel: string;
+  isAgeVerified: boolean;
+  isSalaryVerified: boolean;
+  messageTemplate: null;
+  doShowTemplate: boolean;
+  isFootprintEnable: boolean;
+  isPrivateMode: boolean;
+  isPermanentDeleted: boolean;
+  hiddenMeForNonPremium: boolean;
+  lastActivedAt: Date;
+  created: Date;
+  updated: Date;
+  nickname: null;
+  title: null;
+  favoritedPlace: null;
+  hobby: null;
+  isPhoneVerified: boolean;
+  frequentlyPlace: null;
+  holiday: null;
+  favoriteType: null;
+  annualIncome: null;
+  profession: null;
+  resident: null;
+  personalityType: null;
+  tweet: null;
+  lastLoginAt: Date;
+  lat: null;
+  lng: null;
+  dreamFuture: null;
+  likeReturnRate: null;
+  messageReplyRate: null;
+  dayOfWeekEasyReply: null;
+  avgResponseTimeMessage: null;
+  numberOfPostWantToMeet: number;
+  screenshotInLastMonth: number;
+  flowerReturnRate: null;
+  likeBalance: number;
+  premiumExp: null;
+  deleted: null;
+  referalCode: null;
+  isPrivate: boolean;
+  subscriptionType: string;
+  sexual: null;
+  weight: null;
+  child: null;
+  chatBalance: number;
+  lastReadFootprint: Date;
+  lastReadAction: null;
+  isHiddenTweet: boolean;
+  recruit: null;
+  showFriendTweet: boolean;
+  partner: null;
+  sexual2: null;
+  marriageStatus2: null;
+  bodyShapeId: number;
+  locationId: number;
+  occupation: null;
+  targetMinAge: null;
+  targetMaxAge: number;
+  targetMinHeight: null;
+  targetMaxHeight: number;
+  targetBodyShapeId: null;
+  targetLocationId: null;
+  targetOccupation: null;
+  totalQuestion: string;
+  totalAmountOfDonationsReceived: null;
+  totalAmountDonated: null;
+  bodyShape: BodyShape;
+  avatars: any[];
+  targetBodyShape: null;
+  targetLocation: null;
+  inviteCode: InviteCode;
+  tags: any[];
+  progress: Progress;
+  ageVerify: null;
+  likes: number;
+  balanceYen: number;
+  isShow: boolean;
+}
+
+export interface BodyShape {
+  id: number;
+  category: string;
+  title: string;
+  slug: null;
+  created: Date;
+  updated: Date;
+  ordering: number;
+}
+
+export interface InviteCode {
+  id: number;
+  phone: string;
+  code: string;
+  created: Date;
+  updated: Date;
+}
+
+export interface Location {
+  id: number;
+  placeId: string;
+  name: string;
+  todofuken: string;
+  created: Date;
+  updated: Date;
+}
+
+export interface Progress {
+  introduction: number;
+  basicProfile: number;
+  otherProfile: number;
+}

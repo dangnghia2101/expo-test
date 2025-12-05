@@ -1,0 +1,146 @@
+{
+  "alert": {
+    "password_incorrect": "The mobile phone number or password is incorrect. Type it again."
+  },
+  "auth": {
+    "password_placeholder": "Password",
+    "phone": "Phone number",
+    "phone_number_does_not_exist": "Phone number does not exist"
+  },
+  "change_password": {
+    "confirm_password": "New Password (Confirm)",
+    "current_password": "current password",
+    "new_password": "new password",
+    "password_do_not_match": "Passwords do not match.",
+    "your_password_has_reset": "Your password has been reset."
+  },
+  "code_error": {
+    "block_access_camera": "Access to your camera is blocked. Please allow it again in your settings.",
+    "block_access_photo": "Access to photos is blocked. Please allow again in settings.",
+    "error_occurred": "An error has occurred.",
+    "no_internet": "No internet connection.",
+    "phone_error": "Please enter a valid phone number in 11 digits.",
+    "please_enter_password_with_8": "Please enter a password with 8 or more characters.",
+    "required": "Please enter.",
+    "server_error": "Server Error"
+  },
+  "code_success": {
+    "delete_comment": "Deleted",
+    "report": "Violation has been reported.",
+    "reported": "Reported a violation of {{name}}"
+  },
+  "common": {
+    "cancel": "cancel",
+    "chars_left": "{{count}}/{{max}}",
+    "confirm": "Confirm",
+    "done": "done",
+    "pick_date": "Pick a date",
+    "please_select": "Please select",
+    "required": "required",
+    "see_less": "See less",
+    "see_more": "See more",
+    "select_library": "Select from library",
+    "take_photo": "take a photo",
+    "yes": "yes"
+  },
+  "delete": {
+    "reason": "Reason for withdrawal",
+    "thank_using_our_service": "Thank you for using our service.\nIf you have another opportunity, please."
+  },
+  "edit_profile": {
+    "basic_profile": "Basic Profile",
+    "set_default_avatar": "I made it the main photo"
+  },
+  "format_string": {
+    "date": "YYYY/MM/DD",
+    "date_minus": "YYYY-MM-DD",
+    "date_month_year": "MM/YY",
+    "date_str": "YYYY/MM/DD",
+    "date_suggestion": "MM/DD(ddd)",
+    "date_week_str": "DD/MM (ddd)",
+    "datetime": "YYYY/MM/DD HH:mm",
+    "datetime_booking": "YYYY-MM-DDTHH:mm",
+    "datetime_str": "YYYYMMMMDDHH:mm",
+    "datetime_week": "MM/DD (ddd) HH:mm",
+    "from_day_hour": "{{d}} days {{h}} hours left",
+    "from_hour_minute": "{{h}} hour {{m}} minutes remaining",
+    "full": "things",
+    "fulltime": "YYYY/MM/DD(ddd) HH:mm",
+    "md": "MMMDo",
+    "mmdd": "MM/DD",
+    "number": "YYYYMMDD",
+    "perHour": "hour",
+    "time": "HH:mm",
+    "time_datetime": "HH:mm YYYYMMMMDD",
+    "time_full": "HH:mm:ss",
+    "time_today": "HH:mm today",
+    "time_tomorrow": "HH:mm today",
+    "today": "Today HH:mm",
+    "week": "ddd",
+    "weeks": "dddd"
+  },
+  "gender": {
+    "female": "female",
+    "male": "male"
+  },
+  "onboarding": {
+    "age": "Age",
+    "birthday": "date of birth",
+    "birthday_placeholder": "Select your date of birth",
+    "body_type": "Body type",
+    "friend_age_placeholder": "age",
+    "friend_height_placeholder": "How many cm",
+    "friends_profile": "Friend's profile",
+    "height": "height",
+    "height_placeholder": "Example: 165cm",
+    "name": "name",
+    "name_placeholder": "Please enter (up to 12 characters)",
+    "not_selected": "Not selected",
+    "occupation": "Profession",
+    "occupation_placeholder": "Please enter",
+    "residence": "Place of residence",
+    "self_introduction": "self-introduction",
+    "sex": "gender",
+    "tokyo": "Tokyo"
+  },
+  "profile": {
+    "action": "Action",
+    "favorite": "Favorite",
+    "footprint": "Footprint",
+    "profile_editing": "Profile Edit",
+    "setting": "setting",
+    "tweet": "Tweet",
+    "your_friend": "Your friend"
+  },
+  "setting": {
+    "account_management": "Account Management",
+    "account_settings_security": "Account Settings & Security",
+    "block_list": "Block list",
+    "change_password": "Change password",
+    "check_for_update": "Check for updates",
+    "commercial_traffic_law": "Disclosure based on the Specified Commercial Transactions Act",
+    "faq": "FAQ",
+    "logout": "Log out",
+    "notify_settings": "Notification Settings",
+    "policies_terms_of_use": "Policies & Terms of Use",
+    "privacy_policy": "Privacy Policy",
+    "support_updates": "Support & Updates",
+    "terms_of_service": "Terms of Service",
+    "withdrawal": "withdrawal"
+  },
+  "tabs": {
+    "home": "Home",
+    "message": "Message",
+    "profile": "profile",
+    "tweet": "Tweet"
+  },
+  "tweet": {
+    "delete": "Delete",
+    "topic_created": "Topic created",
+    "updated": "Updated successfully"
+  },
+  "user": {
+    "blocked": "Blocked.",
+    "i_liked_it": "I liked it."
+  }
+}
