@@ -1,13 +1,22 @@
 import axios from 'axios';
 import RNFetchBlob from 'react-native-blob-util';
 
-import { API_URL, API_URL_UPLOAD, TIMEOUT } from '@/configs/constants';
+import {
+  API_URL,
+  API_URL_UPLOAD,
+  TIMEOUT,
+  TMDB_TOKEN
+} from '@/configs/constants';
 import useUserStore from '@/store/useUserStore';
 import { buildURL } from '@/utils/buildURL';
 
 const instance = axios.create({
   baseURL: API_URL,
-  timeout: TIMEOUT
+  timeout: TIMEOUT,
+  headers: {
+    Authorization: `Bearer ${TMDB_TOKEN}`,
+    'Content-Type': 'application/json'
+  }
 });
 
 export function setDefaultHeaders(headers) {

@@ -2,20 +2,19 @@ import React from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Colors, Image, Spacings, Text, View } from 'react-native-ui-lib';
+import { Colors, Image, Spacings, View } from 'react-native-ui-lib';
 
 import { TabScreens } from '@/configs/constants';
-import Chat from '@/containers/chat';
-import Home from '@/containers/home';
-import Profile from '@/containers/profile';
-import Tweet from '@/containers/tweet';
-import { t } from '@/lang';
+import { MovieHome } from '@/containers/movie';
+import Watchlist from '@/containers/watchlist/Watchlist';
 
 const ICONS = {
   [TabScreens.Home]: 'home',
   [TabScreens.Message]: 'message',
   [TabScreens.Tweet]: 'tweet',
-  [TabScreens.Profile]: 'profile'
+  [TabScreens.Profile]: 'profile',
+  [TabScreens.Movies]: 'home',
+  [TabScreens.Watchlist]: 'watchlist'
 };
 
 const Tab = createBottomTabNavigator();
@@ -33,10 +32,8 @@ export default function TabNavigator() {
           assetGroup={'tabs'}
           assetName={icon}
           resizeMode={'contain'}
+          tintColor={color}
         />
-        <Text ixText color={color} marginT-vi numberOfLines={1}>
-          {t(`tabs.${name}`)}
-        </Text>
       </View>
     );
   };
@@ -48,22 +45,19 @@ export default function TabNavigator() {
         tabBarIcon: ({ color, focused }) => renderIcon(route, color, focused),
         tabBarShowLabel: false,
         tabBarInactiveTintColor: Colors.lightGray,
-        tabBarActiveTintColor: Colors.primary,
+        tabBarActiveTintColor: Colors.subWhite,
         tabBarStyle: {
           height: bottom + 48,
           paddingVertical: Spacings.xs,
-          borderTopColor: Colors.subLightPink,
-          borderTopWidth: 1
+          backgroundColor: Colors.subDarkBlue
         },
         tabBarIconStyle: {
           flex: 1,
           width: '100%'
         }
       })}>
-      <Tab.Screen name={TabScreens.Home} component={Home} />
-      <Tab.Screen name={TabScreens.Message} component={Chat} />
-      <Tab.Screen name={TabScreens.Tweet} component={Tweet} />
-      <Tab.Screen name={TabScreens.Profile} component={Profile} />
+      <Tab.Screen name={TabScreens.Movies} component={MovieHome} />
+      <Tab.Screen name={TabScreens.Watchlist} component={Watchlist} />
     </Tab.Navigator>
   );
 }

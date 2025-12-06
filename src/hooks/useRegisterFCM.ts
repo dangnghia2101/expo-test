@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 
-import { getApp } from '@react-native-firebase/app';
-import { getMessaging, onTokenRefresh } from '@react-native-firebase/messaging';
 import dayjs from 'dayjs';
 import { setNotificationHandler } from 'expo-notifications';
 import { useQueryClient } from 'react-query';
@@ -38,9 +36,6 @@ const useRegisterFCM = (): void => {
   const { jumpNotification } = useJumpNotification();
 
   useEffect(() => {
-    const app = getApp();
-    const messaging = getMessaging(app);
-
     const onRegister = (token: string): void => {
       console.log('[App] onRegister: ', token);
     };
@@ -71,12 +66,9 @@ const useRegisterFCM = (): void => {
       jumpNotification(notification);
     };
 
-    let unsubscribe: () => void;
-
     const onConfig = async () => {
       localNotificationService.createChannel();
       await fcmService.register(onRegister, onNotification, onOpenNotification);
-      unsubscribe = onTokenRefresh(messaging, () => updateDeviceInfo());
       updateDeviceInfo();
     };
 
@@ -87,7 +79,6 @@ const useRegisterFCM = (): void => {
     return () => {
       fcmService.unRegister();
       localNotificationService.unregister();
-      unsubscribe?.();
       localNoti();
     };
   }, []);

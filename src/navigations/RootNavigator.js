@@ -19,6 +19,7 @@ import {
   queryClient
 } from '@/configs/constants';
 import Components from '@/containers/common';
+import { MovieDetails } from '@/containers/movie';
 import { useInitApp } from '@/hooks/api';
 
 import Navigator from './Navigator';
@@ -54,6 +55,10 @@ export default function RootNavigator() {
                 <Stack.Screen
                   name={Screens.TabNavigator}
                   component={TabNavigator}
+                />
+                <Stack.Screen
+                  name={Screens.MovieDetails}
+                  component={MovieDetails}
                 />
               </Stack.Navigator>
             </NavigationContainer>

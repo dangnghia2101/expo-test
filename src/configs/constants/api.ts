@@ -4,6 +4,10 @@ export const SOCKET_IO = 'https://api.com/';
 export const STALE_TIME = 30000;
 export const TIMEOUT = 10000;
 
+// TMDB API
+export const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
+export const TMDB_TOKEN = process.env.EXPO_PUBLIC_TMDB_TOKEN || '';
+
 export const API = {
   ACTION: {
     LIST: '/1.0.7/user_action'
@@ -109,5 +113,14 @@ export const API = {
   IAP: {
     PACKAGE: '/package',
     SUBSCRIPTION: '/subscription'
+  },
+  MOVIE: {
+    NOW_PLAYING: '/movie/now_playing',
+    POPULAR: '/movie/popular',
+    UPCOMING: '/movie/upcoming',
+    DETAILS: '/movie/:id',
+    CREDITS: '/movie/:id/credits',
+    RECOMMENDATIONS: '/movie/:id/recommendations',
+    SEARCH: '/search/movie'
   }
 };

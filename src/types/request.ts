@@ -3,3 +3,5 @@ export interface IBaseError {
   message: string;
   success: boolean;
 }
+
+export type SortOrder = 'asc' | 'desc';

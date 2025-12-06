@@ -64,7 +64,7 @@ const FList = <T extends { [key: string]: any }>(
     renderHeader,
     contentContainerStyle,
     textEmpty,
-    activityIndicatorSize = 18,
+    activityIndicatorSize = 32,
     padding,
     paddingH,
     paddingV,

@@ -79,18 +79,18 @@ export interface UseInfiniteParams<TData, TError, TVariables> {
 }
 
 export interface IInfiniteResponse<TData> {
-  currentPage: number;
-  pageSize: number;
+  page: number;
   results: TData[];
-  total: number;
-  totalPages: number;
+  total_results: number;
+  total_pages: number;
 }
 
 export type UseInfiniteResult<TData, TError> = Omit<
   UseInfiniteQueryResult<TData, AxiosError<TError>>,
-  'data'
+  'data' | 'refetch'
 > & {
   response: IInfiniteResponse<TData>;
   data: TData[];
   loadMore: () => void;
+  refetch: () => Promise<void>;
 };

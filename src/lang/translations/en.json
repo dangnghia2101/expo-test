@@ -128,11 +128,28 @@
     "terms_of_service": "Terms of Service",
     "withdrawal": "withdrawal"
   },
+  "movie": {
+    "category": "Category",
+    "category_placeholder": "Select Category",
+    "details": "Movie Details",
+    "details_text": "Movie detail",
+    "no_movies_found": "No movies found",
+    "search": "Search",
+    "search_placeholder": "Search movies...",
+    "sort_by": "Sort by",
+    "sort_placeholder": "Select Sort Order"
+  },
   "tabs": {
     "home": "Home",
     "message": "Message",
+    "movies": "Movies",
     "profile": "profile",
-    "tweet": "Tweet"
+    "tweet": "Tweet",
+    "watchlist": "Watchlist"
+  },
+  "watchlist": {
+    "my_watchlist": "My Watchlist",
+    "watchlist": "Watchlist"
   },
   "tweet": {
     "delete": "Delete",

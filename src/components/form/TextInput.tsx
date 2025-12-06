@@ -66,7 +66,7 @@ const Input: React.FC<InputProps> = ({
   borderWidth = Spacings.i,
   placeholderTextColor = Colors.gray,
   style,
-  radius = Spacings.ii,
+  radius = Spacings.iv,
   onFocus,
   onPressIn,
   onSubmitEditing,

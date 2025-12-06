@@ -3,7 +3,7 @@ import { Colors } from 'react-native-ui-lib';
 import { Modifier } from '@/types';
 
 export const COLORS = {
-  primary: '#FA9E9F',
+  primary: '#00B4E4',
   black: '#231F20',
   white: '#ffffff',
   grey: '#757575',
@@ -15,10 +15,11 @@ export const COLORS = {
   systemOrange: '#FFC727',
   systemSuccess: '#27AE60',
 
-  mainPink: '#FA9E9F',
+  mainPink: '#00B4E4',
 
-  subLightPrimary: '#D690a1',
-  subLightPink: '#FDD8D9',
+  subLightPrimary: '#00B4E4',
+  subLightBlue: '#C8F3FFFF',
+  subDarkBlue: '#032541',
   subGray: '#999999',
   subLightGray: '#F2F2F2',
   subWhite: '#FFFFFF',
@@ -33,7 +34,7 @@ export const COLORS = {
   lightGray: '#DEDEDE',
   darkGray: '#282828',
   radicalRed: '#FE3D78',
-  border: '#3C3C435C',
+  border: '#E3E3E3',
   doveGray: '#616161',
 
   overlayGray: 'rgba(0,0,0,0.4)',

@@ -33,6 +33,7 @@ interface HeaderProps extends ViewProps {
   leftIconSize?: number;
   rightIconSize?: number;
   numberOfLines?: number;
+  showBack?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -55,18 +56,21 @@ const Header: React.FC<HeaderProps> = ({
   leftIconSize = IMAGE_SIZES.medium,
   rightIconSize = IMAGE_SIZES.medium,
   numberOfLines,
+  showBack = false,
   ...props
 }) => {
   const renderLeft = (): React.ReactNode => {
+    const leftIcon = iconLeft || (showBack ? 'chevron_left' : undefined);
+
     return (
       leftComponent || (
         <View paddingH-md left>
-          {iconLeft ? (
+          {leftIcon ? (
             <Pressable hitSlop={15} onPress={onPressLeft || Navigator.goBack}>
               <Image
                 size={leftIconSize}
-                assetName={iconLeft}
-                assetGroup={groupIconLeft}
+                assetName={leftIcon}
+                assetGroup={groupIconLeft || 'icons'}
                 resizeMode={'contain'}
                 tintColor={iconLeftColor}
               />

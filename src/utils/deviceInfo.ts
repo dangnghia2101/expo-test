@@ -29,7 +29,7 @@ export const updateDeviceInfo = async () => {
 
     await api.post(API.AUTH.DEVICE, {
       platform: Platform.OS,
-      token,
+      token: token || '',
       info
     });
   } catch (e) {
@@ -44,7 +44,7 @@ export const deleteDeviceToken = async () => {
     await request({
       url: API.AUTH.DEVICE,
       method: 'delete',
-      query: { token }
+      query: { token: token || '' }
     }).finally(() => {
       setDefaultHeaders({ Authorization: '' });
     });

@@ -11,7 +11,7 @@ import {
   UseInfiniteParams,
   UseInfiniteResult
 } from '@/types';
-import { deDuplicate, showCommonError } from '@/utils';
+import { deDuplicate } from '@/utils';
 
 export const useBaseInfinite = <
   TData = unknown,
@@ -38,14 +38,13 @@ export const useBaseInfinite = <
 
   const result = useInfiniteQuery<TData, AxiosError<TError>>(
     queryKey,
-    async ({ pageParam = 0 }) => {
+    async ({ pageParam = 1 }) => {
       const { data } = await instance.request<TData>({
         url: uri,
         method,
         headers,
         params: {
           page: pageParam,
-          pageSize: 10,
           ...params
         },
         data: body
@@ -68,8 +67,11 @@ export const useBaseInfinite = <
       },
       getNextPageParam: _lastPage => {
         const lastPage = _lastPage as IInfiniteResponse<TData>;
-        if (lastPage.currentPage < lastPage.totalPages - 1) {
-          return lastPage.currentPage + 1;
+        const currentPage = get(lastPage, 'page', 0);
+        const totalPages = get(lastPage, 'total_pages', 0);
+
+        if (currentPage < totalPages) {
+          return currentPage + 1;
         }
         return undefined;
       },
@@ -78,16 +80,21 @@ export const useBaseInfinite = <
     }
   );
 
-  const { hasNextPage, fetchNextPage } = result;
+  const { hasNextPage, fetchNextPage, refetch } = result;
 
   const loadMore = useCallback(() => {
     if (hasNextPage) {
       fetchNextPage?.();
     }
-  }, [hasNextPage]);
+  }, [hasNextPage, fetchNextPage]);
+
+  const refetchWrapper = useCallback(async () => {
+    await refetch();
+  }, [refetch]);
 
   return {
     ...result,
+    refetch: refetchWrapper,
     response: omit(result?.data, [
       'pages',
       'pageParams'

@@ -38,7 +38,7 @@ export const TYPOGRAPHY = {
   },
   text: {
     fontSize: 14,
-    lineHeight: 14
+    lineHeight: 16
   },
   xiiiText: {
     fontSize: 13,

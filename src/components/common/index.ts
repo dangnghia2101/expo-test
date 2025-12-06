@@ -23,3 +23,4 @@ export { default as WebView } from './AHWebView';
 export { default as FMasonryList } from './FMasonryList';
 export { default as TabView } from './TabView';
 export { default as AHWebView } from './AHWebView';
+export { default as Logo } from './Logo';

@@ -60,7 +60,7 @@ const Button: FC<ButtonProps> = ({
   onPress,
   bgColor = Colors.primary,
   children,
-  radius = 4,
+  radius = 40,
   iconLeft,
   iconLeftGroup = 'icons',
   iconRight,

@@ -22,19 +22,17 @@
         "ITSAppUsesNonExemptEncryption": false,
         "CFBundleDevelopmentRegion": "en",
         "CFBundleLocalizations": ["en"]
-      },
-      "googleServicesFile": "./firebase/GoogleService-Info.plist"
+      }
     },
     "android": {
       "package": "vn.dev.expotest",
       "versionCode": "25060201",
       "backgroundColor": "#ffffff",
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/adaptive-icon.png",
-        "monochromeImage": "./src/assets/images/adaptive-icon.png",
+        "foregroundImage": "./src/assets/images/icon.png",
+        "monochromeImage": "./src/assets/images/icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "googleServicesFile": "./firebase/google-services.json"
+      }
     },
     "plugins": [
       [
@@ -57,7 +55,7 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#ffffff",
-          "image": "./src/assets/images/splash.png",
+          "image": "./src/assets/images/icon.png",
           "resizeMode": "contain",
           "ios": {
             "imageWidth": 350
@@ -76,8 +74,6 @@
           "icon": "./src/assets/images/icon.png"
         }
       ],
-      "@react-native-firebase/app",
-      "@react-native-firebase/crashlytics",
       [
         "expo-build-properties",
         {
